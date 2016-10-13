@@ -80,37 +80,14 @@ public class StringUtils {
 			throw new Exception(MensagemUtils.ERROCONVER);
 		}
 	}
-
 	/**
-	 * Método utilizado para verificar se a String está nula.
-	 * 
-	 * @param val
-	 *            é uma {@code String}.
-	 * @return true ou false
-	 */
-	public static boolean isNullValue(String val){
-		return val == null;
-	}
-
-	/**
-	 * Método utilizado para verificar se a String está vazia.
+	 * Método utilizado para verificar se a String está vazia ou nula.
 	 * 
 	 * @param val
 	 *            é uma {@code String}.
 	 * @return true ou false
 	 */
 	public static boolean isEmpty(String val) {
-		return (val != null) ? val.trim().hashCode() == 0 : false;
-	}
-
-	/**
-	 * Método utilizado para verificar se a String está nula ou vazia.
-	 * 
-	 * @param val
-	 *            é uma {@code String}.
-	 * @return true ou false
-	 */
-	public static boolean isNullOrEmpty(String val) {
-		return isEmpty(val) || val == null;
+		return val == null || "".equals(val.trim());
 	}
 }
