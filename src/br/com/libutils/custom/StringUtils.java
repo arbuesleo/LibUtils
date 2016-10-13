@@ -87,7 +87,7 @@ public class StringUtils {
 	 *            é uma {@code String}.
 	 * @return true ou false
 	 */
-	public static boolean isEmpty(String val) {
+	public static boolean isEmptyOrNull(String val) {
 		return val == null || "".equals(val.trim());
 	}
 }
